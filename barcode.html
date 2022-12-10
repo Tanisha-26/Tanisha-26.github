@@ -1,0 +1,38 @@
+Marker generator
+for ARToolKit v4.5.3 and later
+Copright © 2011-2017 Eden Networks Ltd. All rights reserved.
+
+Marker type
+ Pictorial (template)
+ 2D barcode (matrix)
+Marker size (millimetres): 
+80
+
+Marker image resolution: 
+Screen (72 dpi)
+
+Marker pixel size: 226
+ Add a quiet zone around marker (of same size as border)
+Border size (% of marker width) 
+0.25
+
+ Markers have black borders
+ Markers have white borders
+Barcode dimensions: 
+4 x 4
+
+Error checking and correction type: 
+none
+
+Maximum available number of barcodes: 8192
+ Generate a single marker image with code: 
+99
+ (in range 0 to 8191)
+ Generate a range of markers
+Right-click the image and choose "Save image as..."
+
+marker image
+To use the marker in ARToolKit, the following code must be included in ARToolKit setup:
+arSetPatternDetectionMode(<#ARHandle handle#>, AR_MATRIX_CODE_DETECTION);
+arSetMatrixCodeType(<#ARHandle handle#>, AR_MATRIX_CODE_4x4);
+ 
